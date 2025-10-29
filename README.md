@@ -2,7 +2,7 @@
 
 行列、テイラー展開、フーリエ解析など、物理学で用いられる重要な数学の概念を分かりやすく解説するインタラクティブな学習サイトです。
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/462c4e8b-77fa-4349-9dad-f09c5124243c/deploy-status)](https://phys-math.netlify.app/)
+[デプロイ先: phys-math.onrender.com](https://phys-math.onrender.com)
 
 ## ✨ 特徴 (Features)
 
@@ -43,7 +43,7 @@
 - **Frontend:** React, TypeScript
 - **Styling:** Tailwind CSS
 - **Math Rendering:** KaTeX
-- **Hosting:** Netlify
+- **Hosting:** Render
 
 ## 🚀 実行とデプロイ (Getting Started & Deployment)
 
@@ -68,16 +68,31 @@ npm install -g serve
 serve .
 ```
 
-### Netlifyへのデプロイ（推奨）
+### Renderへのデプロイ
 
-このアプリケーションはNetlifyでのホスティングに最適化されています。以下の手順でデプロイすることで、すべての機能が正しく動作します。
+このアプリケーションはRenderの静的サイトホスティングサービスにデプロイできます。
 
-1.  プロジェクトファイルをNetlifyにアップロードします。
-2.  **デプロイする前に、プロジェクトのルートにある `_headers.txt` ファイルを `_headers` にリネームしてください。**
+1. Renderで新しい **Static Site** を作成します。
+2. リポジトリを接続します。
+3. 以下のビルド設定を行います。
+    - **Build Command:** `echo "No build step required"`
+    - **Publish Directory:** `.`
 
-    ```bash
-    # (ターミナルでの操作例)
-    mv _headers.txt _headers
-    ```
+#### ⚠️ 重要: MIMEタイプの設定
 
-  この `_headers` ファイルは、NetlifyのサーバーがTypeScriptファイル (`.ts`, `.tsx`) をブラウザが解釈できる正しいJavaScript形式 (`text/javascript`) で配信するために**不可欠**です。この設定がないと、MIMEタイプエラーが発生し、アプリケーションが正しく表示されません。
+このプロジェクトはビルドステップなしでTypeScriptファイル (`.ts`, `.tsx`) を直接ブラウザで読み込みます。正しく動作させるためには、RenderのサーバーがこれらのファイルをJavaScriptとして配信するよう設定する必要があります。
+
+- Renderダッシュボードの **Redirects/Rewrites** タブに移動します。
+- **Headers** セクションで、以下の2つのルールを追加します。
+
+1.  **ルール1 (TSXファイル用)**
+    -   **Path:** `/*.tsx`
+    -   **Name:** `Content-Type`
+    -   **Value:** `text/javascript`
+
+2.  **ルール2 (TSファイル用)**
+    -   **Path:** `/*.ts`
+    -   **Name:** `Content-Type`
+    -   **Value:** `text/javascript`
+
+この設定がないと、MIMEタイプのエラーによりアプリケーションが正しく読み込まれません。

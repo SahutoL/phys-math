@@ -9,7 +9,7 @@ import type { Topic } from './types.ts';
 
 export type Theme = 'light' | 'dark' | 'system';
 
-const BASE_URL = "https://phys-math.netlify.app/";
+const BASE_URL = "https://phys-math.onrender.com/";
 const SITE_NAME = "物理数学の世界";
 const DEFAULT_DESCRIPTION = "行列、テイラー展開、フーリエ解析など、物理学で用いられる重要な数学の概念を分かりやすく解説するインタラクティブな学習サイトです。";
 
