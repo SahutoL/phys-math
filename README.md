@@ -3,7 +3,7 @@
 
 行列、テイラー展開、フーリエ解析など、物理学で用いられる重要な数学の概念を分かりやすく解説するインタラクティブな学習サイトです。
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/462c4e8b-77fa-4349-9dad-f09c5124243c/deploy-status)](https://app.netlify.com/projects/phys-math/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/462c4e8b-77fa-4349-9dad-f09c5124243c/deploy-status)](https://phys-math.netlify.app/)
 
 ## ✨ 特徴 (Features)
 
