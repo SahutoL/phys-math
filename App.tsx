@@ -5,7 +5,7 @@ import Content from './components/Content.tsx';
 import Header from './components/Header.tsx';
 import Home from './components/Home.tsx';
 import { topics } from './constants/topics.ts';
-import type { Topic } from './types.ts';
+import { Topic } from './types.ts';
 
 export type Theme = 'light' | 'dark' | 'system';
 
