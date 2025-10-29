@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja" class="h-full" style="scroll-behavior: smooth;">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>物理数学の世界</title>
+    <meta id="meta-description" name="description" content="行列、テイラー展開、フーリエ解析など、物理学で用いられる重要な数学の概念を分かりやすく解説するインタラクティブな学習サイトです。" />
+    <meta name="keywords" content="物理数学, 解析力学, 量子力学, 相対性理論, 数学, 物理, 学習, 解説" />
+    <link id="canonical-url" rel="canonical" href="https://physics-mathematics-world.netlify.app/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta id="og-url" property="og:url" content="https://physics-mathematics-world.netlify.app/" />
+    <meta id="og-title" property="og:title" content="物理数学の世界" />
+    <meta id="og-description" property="og:description" content="行列、テイラー展開、フーリエ解析など、物理学で用いられる重要な数学の概念を分かりやすく解説するインタラクティブな学習サイトです。" />
+    <meta property="og:site_name" content="物理数学の世界" />
+    <meta property="og:locale" content="ja_JP" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta id="twitter-url" property="twitter:url" content="https://physics-mathematics-world.netlify.app/" />
+    <meta id="twitter-title" property="twitter:title" content="物理数学の世界" />
+    <meta id="twitter-description" property="twitter:description" content="行列、テイラー展開、フーリエ解析など、物理学で用いられる重要な数学の概念を分かりやすく解説するインタラクティブな学習サイトです。" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Noto Sans JP', 'sans-serif'],
+              serif: ['Noto Serif JP', 'serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .content-fade-in {
+        animation: fadeIn 0.5s ease-out forwards;
+      }
+      .dark .katex {
+        color: #e5e5e5; /* text-neutral-200 */
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha34-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "katex": "https://esm.sh/katex@0.16.9/dist/katex.mjs"
+  }
+}
+</script>
+</head>
+  <body class="h-full bg-white text-neutral-800 dark:bg-neutral-900 dark:text-neutral-200 transition-colors duration-300">
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
+    <div id="root" class="h-full"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
