@@ -1,0 +1,23 @@
+# Netlify Headers File
+# This file configures Netlify to serve TypeScript and TSX files with the
+# correct 'text/javascript' MIME type. This is crucial for the browser
+# to execute them as modules. Rename this file to '_headers' before deploying.
+
+/index.tsx
+  Content-Type: text/javascript
+/App.tsx
+  Content-Type: text/javascript
+/types.ts
+  Content-Type: text/javascript
+
+# Component files
+/components/*.tsx
+  Content-Type: text/javascript
+/components/*.ts
+  Content-Type: text/javascript
+
+# Constants and content files
+/constants/*.ts
+  Content-Type: text/javascript
+/constants/content/*.tsx
+  Content-Type: text/javascript
