@@ -1,7 +1,8 @@
+
 import React, { useEffect, useRef, useState } from 'react';
-import type { Topic } from '../types';
-import RelatedArticles from './RelatedArticles';
-import TableOfContents, { type Heading } from './TableOfContents';
+import type { Topic } from '../types.ts';
+import RelatedArticles from './RelatedArticles.tsx';
+import TableOfContents, { type Heading } from './TableOfContents.tsx';
 
 interface ContentProps {
   topic: Topic;

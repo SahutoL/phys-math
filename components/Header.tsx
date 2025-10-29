@@ -1,6 +1,7 @@
+
 import React from 'react';
-import ThemeSwitcher from './ThemeSwitcher';
-import type { Theme } from '../App';
+import ThemeSwitcher from './ThemeSwitcher.tsx';
+import type { Theme } from '../App.tsx';
 
 interface HeaderProps {
   title: string;

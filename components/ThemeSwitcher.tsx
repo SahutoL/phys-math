@@ -1,5 +1,6 @@
+
 import React from 'react';
-import type { Theme } from '../App';
+import type { Theme } from '../App.tsx';
 
 interface ThemeSwitcherProps {
   theme: Theme;

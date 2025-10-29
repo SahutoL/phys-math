@@ -1,10 +1,11 @@
+
 import React, { useState, useMemo, useEffect } from 'react';
-import Sidebar from './components/Sidebar';
-import Content from './components/Content';
-import Header from './components/Header';
-import Home from './components/Home';
-import { topics } from './constants/topics';
-import type { Topic } from './types';
+import Sidebar from './components/Sidebar.tsx';
+import Content from './components/Content.tsx';
+import Header from './components/Header.tsx';
+import Home from './components/Home.tsx';
+import { topics } from './constants/topics.ts';
+import type { Topic } from './types.ts';
 
 export type Theme = 'light' | 'dark' | 'system';
 

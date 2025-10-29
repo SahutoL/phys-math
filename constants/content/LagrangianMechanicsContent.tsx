@@ -1,5 +1,6 @@
+
 import React from 'react';
-import MathDisplay from '../../components/MathDisplay';
+import MathDisplay from '../../components/MathDisplay.tsx';
 
 const LagrangianMechanicsContent = () => (
     <>
@@ -27,7 +28,7 @@ const LagrangianMechanicsContent = () => (
         <p className='mt-4'>したがって、ラグランジアンは <MathDisplay mathString="L = \frac{1}{2}ml^2\dot{\\theta}^2 + mgl\cos\theta" /> となります。オイラー・ラグランジュ方程式を適用すると、</p>
         <MathDisplay displayMode={true} mathString={`\\frac{\\partial L}{\\partial \\dot{\\theta}} = ml^2\\dot{\\theta} \\quad \\implies \\quad \\frac{d}{dt}\\left( \\frac{\\partial L}{\\partial \\dot{\\theta}} \\right) = ml^2\\ddot{\\theta}`} />
         <MathDisplay displayMode={true} mathString={`\\frac{\\partial L}{\\partial \\theta} = -mgl\\sin\\theta`} />
-        <p className='mt-4'>これらから、<MathDisplay mathString="ml^2\ddot{\theta} - (-mgl\sin\theta) = 0" />、すなわちよく知られた振り子の運動方程式 <MathDisplay mathString="\ddot{\\theta} + \frac{g}{l}\sin\theta = 0" /> が導かれます。</p>
+        <p className='mt-4'>これらから、<MathDisplay mathString="ml^2\ddot{\\theta} - (-mgl\sin\theta) = 0" />、すなわちよく知られた振り子の運動方程式 <MathDisplay mathString="\ddot{\\theta} + \frac{g}{l}\sin\theta = 0" /> が導かれます。</p>
         
         <h3 className="text-2xl font-bold mt-8 mb-3">対称性と保存則（ネーターの定理）</h3>
         <p className="mb-4">ラグランジュ形式の大きな利点の一つは、対称性と保存則の関係が明確になることです。ネーターの定理によれば、「ラグランジアンがある連続的な変換（例えば、並進や回転）に対して不変であるならば、それに対応する保存量が存在する」ことが示されます。</p>

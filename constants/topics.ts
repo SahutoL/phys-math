@@ -1,25 +1,25 @@
 
 import React from 'react';
-import type { Topic } from '../types';
+import type { Topic } from '../types.ts';
 
-import MatrixContent from './content/MatrixContent';
-import TaylorExpansionContent from './content/TaylorExpansionContent';
-import FourierSeriesContent from './content/FourierSeriesContent';
-import FourierTransformContent from './content/FourierTransformContent';
-import LaplaceTransformContent from './content/LaplaceTransformContent';
-import VectorCalculusContent from './content/VectorCalculusContent';
-import CalculusOfVariationsContent from './content/CalculusOfVariationsContent';
-import ComplexAnalysisContent from './content/ComplexAnalysisContent';
-import SpecialFunctionsContent from './content/SpecialFunctionsContent';
-import GroupTheoryContent from './content/GroupTheoryContent';
-import TensorAnalysisContent from './content/TensorAnalysisContent';
-import DifferentialGeometryContent from './content/DifferentialGeometryContent';
-import ProbabilityStatisticsContent from './content/ProbabilityStatisticsContent';
-import HamiltonianMechanicsContent from './content/HamiltonianMechanicsContent';
-import HilbertSpaceContent from './content/HilbertSpaceContent';
-import LagrangianMechanicsContent from './content/LagrangianMechanicsContent';
-import FluidDynamicsContent from './content/FluidDynamicsContent';
-import GreensFunctionContent from './content/GreensFunctionContent';
+import MatrixContent from './content/MatrixContent.tsx';
+import TaylorExpansionContent from './content/TaylorExpansionContent.tsx';
+import FourierSeriesContent from './content/FourierSeriesContent.tsx';
+import FourierTransformContent from './content/FourierTransformContent.tsx';
+import LaplaceTransformContent from './content/LaplaceTransformContent.tsx';
+import VectorCalculusContent from './content/VectorCalculusContent.tsx';
+import CalculusOfVariationsContent from './content/CalculusOfVariationsContent.tsx';
+import ComplexAnalysisContent from './content/ComplexAnalysisContent.tsx';
+import SpecialFunctionsContent from './content/SpecialFunctionsContent.tsx';
+import GroupTheoryContent from './content/GroupTheoryContent.tsx';
+import TensorAnalysisContent from './content/TensorAnalysisContent.tsx';
+import DifferentialGeometryContent from './content/DifferentialGeometryContent.tsx';
+import ProbabilityStatisticsContent from './content/ProbabilityStatisticsContent.tsx';
+import HamiltonianMechanicsContent from './content/HamiltonianMechanicsContent.tsx';
+import HilbertSpaceContent from './content/HilbertSpaceContent.tsx';
+import LagrangianMechanicsContent from './content/LagrangianMechanicsContent.tsx';
+import FluidDynamicsContent from './content/FluidDynamicsContent.tsx';
+import GreensFunctionContent from './content/GreensFunctionContent.tsx';
 
 
 const topicSummaries: { [key: string]: string } = {

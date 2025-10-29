@@ -1,5 +1,6 @@
+
 import React from 'react';
-import MathDisplay from '../../components/MathDisplay';
+import MathDisplay from '../../components/MathDisplay.tsx';
 
 const TensorAnalysisContent = () => (
     <>

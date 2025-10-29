@@ -1,5 +1,6 @@
+
 import React, { useMemo } from 'react';
-import type { Topic } from '../types';
+import type { Topic } from '../types.ts';
 
 interface RelatedArticlesProps {
   allTopics: Topic[];
